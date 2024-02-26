@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JSX and Babel</title>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    // Your JSX code here
+
+
+    function JSXShowcase() {
+    // Define variables and arrays
+    const name = "John";
+    const age = 20;
+    const hobbies = ['Reading', 'Gaming', 'Cooking'];
+
+    // Define functions
+    const greet = () => {
+        return `Hello, ${name}!`;
+    };
+
+    // Define conditional rendering
+    const isLoggedIn = false;
+
+    return (
+        <div>
+            {/* Element rendering */}
+            <h1>JSX Showcase</h1>
+            <p>This component demonstrates various JSX features.</p>
+
+            {/* JavaScript integration */}
+            <p>{greet()}</p>
+            <p>{name} is {age} years old.</p>
+            <p>Hobbies: {hobbies.join(', ')}</p>
+
+            {/* Conditional rendering */}
+            {isLoggedIn ? (
+                <p>User is logged in.</p>
+            ) : (
+                <p>User is not logged in.</p>
+            )}
+
+            {/* Conditional rendering with ternary operator */}
+            {age >= 18 ? (
+                <button>Vote</button>
+            ) : (
+                <button disabled>Vote</button>
+            )}
+        </div>
+    );
+}
+
+    const ReactRoot =  ReactDOM.createRoot(document.getElementById("root"))
+
+    ReactRoot.render(<JSXShowcase/>)
+  </script>
+</body>
+</html>
