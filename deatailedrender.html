@@ -15,9 +15,9 @@
 
     function JSXShowcase() {
     // Define variables and arrays
-    const name = "John";
-    const age = 20;
-    const hobbies = ['Reading', 'Gaming', 'Cooking'];
+    const name = "Prince Yadav";
+    const age = 18;
+    const hobbies = ['Reading', 'Gaming', 'Codiing', 'Playing Cricket'];
 
     // Define functions
     const greet = () => {
@@ -25,7 +25,7 @@
     };
 
     // Define conditional rendering
-    const isLoggedIn = false;
+    const isLoggedIn = true;
 
     return (
         <div>
@@ -46,10 +46,10 @@
             )}
 
             {/* Conditional rendering with ternary operator */}
-            {age >= 18 ? (
+            {age >= 18   ? (
                 <button>Vote</button>
             ) : (
-                <button disabled>Vote</button>
+                <button disabled>Sorry You're Not Eligbile to Vote</button>
             )}
         </div>
     );
